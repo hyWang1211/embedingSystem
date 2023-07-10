@@ -1,0 +1,57 @@
+C51 COMPILER V9.60.7.0   SERIAL                                                            07/01/2023 12:28:26 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE SERIAL
+OBJECT MODULE PLACED IN .\Objects\serial.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE serial.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.
+                    -\Listings\serial.lst) OBJECT(.\Objects\serial.obj)
+
+line level    source
+
+   1          #include "serial.h"
+   2          #include <REGX52.H>
+   3          
+   4          void serial_init()
+   5          {
+   6   1              //init SCON
+   7   1              SCON = 0x50;
+   8   1              PCON = 0x80;
+   9   1              
+  10   1              //init timer1;
+  11   1              //init TMOD
+  12   1              TMOD &= 0x0F;// clear high 4 bits
+  13   1              TMOD |= 0x20;
+  14   1              
+  15   1              //init TCON
+  16   1              TR1 =1;
+  17   1              
+  18   1              //IE init
+  19   1              ET1 = 0;
+  20   1              
+  21   1              //
+  22   1              TL1 = 0xF3;
+  23   1              TH1 = 0xF3;
+  24   1              
+  25   1      }
+  26          
+  27          void serial_send(unsigned char Byte)
+  28          {
+  29   1              SBUF = Byte;
+  30   1              
+  31   1              while(TI == 0);
+  32   1              TI = 0;
+  33   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     31    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

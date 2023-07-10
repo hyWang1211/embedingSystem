@@ -1,0 +1,30 @@
+C51 COMPILER V9.60.7.0   LED_MATRIX                                                        07/01/2023 22:18:58 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE LED_MATRIX
+OBJECT MODULE PLACED IN .\Objects\led_matrix.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE led_matrix.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRI
+                    -NT(.\Listings\led_matrix.lst) OBJECT(.\Objects\led_matrix.obj)
+
+line level    source
+
+   1          #include "led_matrix.h"
+   2          
+   3          void scan_led_matrix()
+   4          {
+   5   1              
+   6   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      1    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,212 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              07/05/2023 12:02:30 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "DS1302.h"
+   3          #include "LCD1602.h"
+   4          #include "key.h"
+   5          #include "timer.h"
+   6          //four independent button to control time
+   7          //assume there are two MODE for time show
+   8          //one mode is show time, another is adjust time
+   9          
+  10          //there we use button k1 to choose two mode, press button means adjust
+  11          unsigned char MODE = 0, keyNum = 0, TimeSetSelect = 0, TimeFlashFlag = 0;
+  12          unsigned char Month_days[] = {
+  13                  31,
+  14                  28,
+  15                  31,
+  16                  30,
+  17                  31,
+  18                  30,
+  19                  31,
+  20                  31,
+  21                  30,
+  22                  31,
+  23                  30,
+  24                  31
+  25          };
+  26          
+  27          void Time_Show()
+  28          {
+  29   1              show_time();
+  30   1              LCD_ShowNum(1,1,DS1302_Time[0],2);
+  31   1              LCD_ShowNum(1,4,DS1302_Time[1],2);
+  32   1              LCD_ShowNum(1,7,DS1302_Time[2],2);
+  33   1              LCD_ShowNum(2,1,DS1302_Time[3],2);
+  34   1              LCD_ShowNum(2,4,DS1302_Time[4],2);
+  35   1              LCD_ShowNum(2,7,DS1302_Time[5],2);
+  36   1      }
+  37          
+  38          unsigned char Is_Leap_Year(unsigned char year)
+  39          {
+  40   1              return year % 4 == 0;
+  41   1      }
+  42          
+  43          void Time_Set()
+  44          {
+  45   1              
+  46   1              if (keyNum == 2) {
+  47   2                      //select what to adjust(1-6)
+  48   2                      TimeSetSelect = (TimeSetSelect + 1) % 6;
+  49   2                      LCD_ShowNum(2, 10, TimeSetSelect, 2); 
+  50   2                      
+  51   2              }else if (keyNum == 3) {
+  52   2                      //current to increase
+  53   2                      DS1302_Time[TimeSetSelect] ++;
+  54   2                      if (Is_Leap_Year(DS1302_Time[0]))
+C51 COMPILER V9.60.7.0   MAIN                                                              07/05/2023 12:02:30 PAGE 2   
+
+  55   2                              Month_days[1] = 29;
+  56   2                      else
+  57   2                              Month_days[1] = 28;
+  58   2                      
+  59   2                      
+  60   2                      if (DS1302_Time[5] >= 60) {DS1302_Time[5] = 0;}
+  61   2                      if (DS1302_Time[4] >= 60) {DS1302_Time[4] = 0;}
+  62   2                      if (DS1302_Time[3] >= 24) {DS1302_Time[3] = 0;}
+  63   2                      if (DS1302_Time[0] > 99) {DS1302_Time[0] = 0;}
+  64   2                      if (DS1302_Time[1] > 12) {DS1302_Time[1] = 1;}
+  65   2                      if (DS1302_Time[2] > Month_days[DS1302_Time[1] - 1]) {
+  66   3                              DS1302_Time[2] = 1;
+  67   3                      }
+  68   2                      
+  69   2              }else if (keyNum == 4) {
+  70   2                      DS1302_Time[TimeSetSelect] --;
+  71   2                      if (Is_Leap_Year(DS1302_Time[0]))
+  72   2                              Month_days[1] = 29;
+  73   2                      else
+  74   2                              Month_days[1] = 28;
+  75   2                      
+  76   2                      
+  77   2                      if (DS1302_Time[5] < 0 ) {DS1302_Time[5] = 59;}
+  78   2                      if (DS1302_Time[4] < 0 ) {DS1302_Time[4] = 59;}
+  79   2                      if (DS1302_Time[3] < 0 ) {DS1302_Time[3] = 23;}
+  80   2                      
+  81   2                      if (DS1302_Time[0] < 0) {DS1302_Time[0] = 99;}
+  82   2                      if (DS1302_Time[1] <= 0 ) {DS1302_Time[1] = 12;}
+  83   2                      
+  84   2                      if (DS1302_Time[2] <= Month_days[DS1302_Time[1] - 1]) {
+  85   3                              //riqihefa
+  86   3                              if (DS1302_Time[2] <= 0) {
+  87   4                                      DS1302_Time[2] = Month_days[DS1302_Time[1] - 1];
+  88   4                              }
+  89   3                      }else {
+  90   3                              DS1302_Time[2] = Month_days[DS1302_Time[1] - 1];
+  91   3                      }
+  92   2                      
+  93   2                      
+  94   2              }
+  95   1              
+  96   1              if (TimeSetSelect == 0 && TimeFlashFlag == 1) {
+  97   2                      LCD_ShowString(1, 1, "  ");
+  98   2              }else {
+  99   2                      LCD_ShowNum(1,1,DS1302_Time[0],2);
+ 100   2              }
+ 101   1              
+ 102   1              if (TimeSetSelect == 1 && TimeFlashFlag == 1) {
+ 103   2                      LCD_ShowString(1, 4, "  ");
+ 104   2              }else {
+ 105   2                      LCD_ShowNum(1,4,DS1302_Time[1],2);
+ 106   2              }
+ 107   1              
+ 108   1              if (TimeSetSelect == 2 && TimeFlashFlag == 1) {
+ 109   2                      LCD_ShowString(1, 7, "  ");
+ 110   2              }else {
+ 111   2                      LCD_ShowNum(1,7,DS1302_Time[2],2);
+ 112   2              }
+ 113   1              
+ 114   1              if (TimeSetSelect == 3 && TimeFlashFlag == 1) {
+ 115   2                      LCD_ShowString(2, 1, "  ");
+ 116   2              }else {
+C51 COMPILER V9.60.7.0   MAIN                                                              07/05/2023 12:02:30 PAGE 3   
+
+ 117   2                      LCD_ShowNum(2,1,DS1302_Time[3],2);
+ 118   2              }
+ 119   1              
+ 120   1              if (TimeSetSelect == 4 && TimeFlashFlag == 1) {
+ 121   2                      LCD_ShowString(2, 4, "  ");
+ 122   2              }else {
+ 123   2                      LCD_ShowNum(2,4,DS1302_Time[4],2);
+ 124   2              }
+ 125   1              
+ 126   1              if (TimeSetSelect == 5 && TimeFlashFlag == 1) {
+ 127   2                      LCD_ShowString(2, 7, "  ");
+ 128   2              }else {
+ 129   2                      LCD_ShowNum(2,7,DS1302_Time[5],2);
+ 130   2              }
+ 131   1              
+ 132   1              /*LCD_ShowNum(1,1,DS1302_Time[0],2);
+ 133   1              LCD_ShowNum(1,4,DS1302_Time[1],2);
+ 134   1              LCD_ShowNum(1,7,DS1302_Time[2],2);
+ 135   1              LCD_ShowNum(2,1,DS1302_Time[3],2);
+ 136   1              LCD_ShowNum(2,4,DS1302_Time[4],2);
+ 137   1              LCD_ShowNum(2,7,DS1302_Time[5],2);*/
+ 138   1      }
+ 139          
+ 140          
+ 141          
+ 142          
+ 143          void main()
+ 144          {
+ 145   1              DS1302_init();
+ 146   1              LCD_Init();
+ 147   1              Timer0_init();
+ 148   1              set_time();
+ 149   1              while (1) {
+ 150   2                      
+ 151   2                      // which 
+ 152   2                      keyNum = getKeyNum();
+ 153   2                      
+ 154   2                      if (keyNum == 1) {
+ 155   3                              MODE = !MODE;
+ 156   3                              if (MODE == 0) set_time();
+ 157   3                      }
+ 158   2                      
+ 159   2                      LCD_ShowNum(1, 10, MODE, 1);
+ 160   2                      if (MODE == 0) {
+ 161   3                              LCD_ShowNum(1, 13, MODE, 1);
+ 162   3                              Time_Show();
+ 163   3                      }else {
+ 164   3                              Time_Set();
+ 165   3                      }
+ 166   2              }
+ 167   1      }
+ 168          
+ 169          void Timer0_Routine() interrupt 1
+ 170          {
+ 171   1              static unsigned int T0_count;
+ 172   1              
+ 173   1              TL0 = 0x18;
+ 174   1              TH0 = 0xFC;
+ 175   1              
+ 176   1              T0_count ++;
+ 177   1              
+ 178   1              if (T0_count >= 500) {
+C51 COMPILER V9.60.7.0   MAIN                                                              07/05/2023 12:02:30 PAGE 4   
+
+ 179   2                      T0_count = 0;
+ 180   2                      TimeFlashFlag = !TimeFlashFlag;
+ 181   2              }
+ 182   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    806    ----
+   CONSTANT SIZE    =      3    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     18    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

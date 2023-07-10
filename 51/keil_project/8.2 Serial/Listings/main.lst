@@ -1,0 +1,43 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              07/01/2023 13:06:29 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include "serial.h"
+   3          
+   4          void main()
+   5          {
+   6   1              serial_init();
+   7   1              while(1) {
+   8   2                      
+   9   2              }
+  10   1      }
+  11          
+  12          void UART_Routine() interrupt 4
+  13          {
+  14   1              if (RI == 1) {
+  15   2                      P2 = ~SBUF;
+  16   2                      serial_send(SBUF);
+  17   2                      RI = 0;
+  18   2              }
+  19   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     76    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

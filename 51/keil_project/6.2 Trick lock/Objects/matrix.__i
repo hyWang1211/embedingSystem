@@ -1,0 +1,1 @@
+"matrix.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\matrix.lst) OBJECT(.\Objects\matrix.obj)
