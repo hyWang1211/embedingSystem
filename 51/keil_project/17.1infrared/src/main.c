@@ -7,9 +7,10 @@
 unsigned char adr;
 unsigned char cmd;
 unsigned int time;
-
+// sbit p20 = P2^0;
 void main()
 {
+    // p20 = 0;
     LCD_Init();
     infrared_init();
     LCD_ShowString(1, 1, "Infradred Test");
@@ -19,7 +20,7 @@ void main()
             cmd = IR_get_data_command();
 
             LCD_ShowHexNum(2, 1, adr, 4);
-            LCD_ShowHexNum(2, 6, cmd, 4); 
+            LCD_ShowHexNum(2, 6, cmd, 4);
         }
     }
 }

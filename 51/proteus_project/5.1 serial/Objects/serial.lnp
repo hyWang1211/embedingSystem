@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\serial.obj" 
+TO ".\Objects\serial" 
+PRINT(".\Listings\serial.m51") RAMSIZE(256) 

@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              07/19/2023 18:08:18 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <regx52.h>
+   2          #include <timer0.h>
+   3          
+   4          unsigned char timer0_count = 0;
+   5          sbit wave = P2^0;
+   6          void main()
+   7          {
+   8   1              timer0_init();
+   9   1              
+  10   1              while(1) {
+  11   2                      
+  12   2              }
+  13   1      }
+  14          
+  15          
+  16          void timer0_routine() interrupt 1
+  17          {
+  18   1              TL0 = 0xF0;                             //???????
+  19   1              TH0 = 0xD8;                             //???????
+  20   1              
+  21   1              timer0_count ++;
+  22   1              
+  23   1              if (timer0_count >= 100) {
+  24   2                      wave = ~wave;
+  25   2                      timer0_count = 0;
+  26   2              }
+  27   1              
+  28   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     34    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

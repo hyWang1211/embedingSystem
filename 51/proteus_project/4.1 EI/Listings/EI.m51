@@ -1,0 +1,117 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    07/19/2023  19:18:07  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\DEVELOPMENT\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\EI PRINT (.\Listings\EI.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\DEVELOPMENT\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\EI (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     000CH     UNIT         ?PR?MAIN?MAIN
+                    0012H     0001H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+            CODE    0016H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0022H     0007H     UNIT         ?PR?INT0_INIT?MAIN
+            CODE    0029H     0007H     UNIT         ?PR?INT1_INIT?MAIN
+            CODE    0030H     0003H     UNIT         ?PR?INT0_ROUTINE?MAIN
+            CODE    0033H     0003H     UNIT         ?PR?INT1_ROUTINE?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\EI (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?INT0_INIT?MAIN
+  +--> ?PR?INT1_INIT?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\EI (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/19/2023  19:18:07  PAGE 2
+
+
+  D:00A0H         PUBLIC        P2
+  B:00A8H.7       PUBLIC        EA
+  C:0022H         PUBLIC        int0_init
+  C:0029H         PUBLIC        int1_init
+  C:0006H         PUBLIC        main
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  B:00A0H.0       PUBLIC        led1
+  C:0030H         PUBLIC        int0_routine
+  B:00A0H.1       PUBLIC        led2
+  C:0033H         PUBLIC        int1_routine
+  -------         PROC          MAIN
+  C:0006H         LINE#         7
+  C:0006H         LINE#         8
+  C:0006H         LINE#         9
+  C:0008H         LINE#         10
+  C:000AH         LINE#         11
+  C:000DH         LINE#         12
+  C:0010H         LINE#         13
+  C:0010H         LINE#         15
+  -------         ENDPROC       MAIN
+  -------         PROC          INT0_INIT
+  C:0022H         LINE#         18
+  C:0022H         LINE#         19
+  C:0022H         LINE#         20
+  C:0024H         LINE#         21
+  C:0026H         LINE#         22
+  C:0028H         LINE#         23
+  -------         ENDPROC       INT0_INIT
+  -------         PROC          INT1_INIT
+  C:0029H         LINE#         25
+  C:0029H         LINE#         26
+  C:0029H         LINE#         27
+  C:002BH         LINE#         28
+  C:002DH         LINE#         29
+  C:002FH         LINE#         30
+  -------         ENDPROC       INT1_INIT
+  -------         PROC          INT0_ROUTINE
+  C:0030H         LINE#         32
+  C:0030H         LINE#         34
+  C:0032H         LINE#         36
+  -------         ENDPROC       INT0_ROUTINE
+  -------         PROC          INT1_ROUTINE
+  C:0033H         LINE#         38
+  C:0033H         LINE#         40
+  C:0035H         LINE#         41
+  -------         ENDPROC       INT1_ROUTINE
+  -------         ENDMOD        MAIN
+
+Program Size: data=9.0 xdata=0 code=53
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

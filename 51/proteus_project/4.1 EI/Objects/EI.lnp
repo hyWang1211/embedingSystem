@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\EI" 
+PRINT(".\Listings\EI.m51") RAMSIZE(256) 

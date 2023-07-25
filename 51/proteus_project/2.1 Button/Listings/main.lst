@@ -1,0 +1,50 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              07/19/2023 17:21:00 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <regx52.h>
+   2          
+   3          void disw_control_led();
+   4          void logicstate_control_led();
+   5          
+   6          sbit led = P1^0;
+   7          sbit logic = P1^6;
+   8          void main()
+   9          {
+  10   1              while(1) {
+  11   2                      disw_control_led();
+  12   2                      logicstate_control_led();
+  13   2              }
+  14   1                      
+  15   1      }
+  16          
+  17          void disw_control_led()
+  18          {
+  19   1              P2 = P3;
+  20   1      }
+  21          
+  22          void logicstate_control_led()
+  23          {
+  24   1              unsigned char temp = logic;
+  25   1              led = temp;
+  26   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     21    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

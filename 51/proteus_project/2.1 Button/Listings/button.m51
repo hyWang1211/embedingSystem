@@ -1,0 +1,95 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    07/19/2023  17:20:45  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\DEVELOPMENT\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\button PRINT (.\Listings\button.m51) RAMSIZE (25
+>> 6)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\DEVELOPMENT\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\button (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000CH     UNIT         ?C_C51STARTUP
+            CODE    000FH     0009H     UNIT         ?PR?LOGICSTATE_CONTROL_LED?MAIN
+            CODE    0018H     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    0020H     0004H     UNIT         ?PR?DISW_CONTROL_LED?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\button (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?DISW_CONTROL_LED?MAIN
+  +--> ?PR?LOGICSTATE_CONTROL_LED?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\button (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0018H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/19/2023  17:20:45  PAGE 2
+
+
+  C:000FH         PUBLIC        logicstate_control_led
+  B:0090H.0       PUBLIC        led
+  C:0020H         PUBLIC        disw_control_led
+  -------         PROC          MAIN
+  C:0018H         LINE#         8
+  C:0018H         LINE#         9
+  C:0018H         LINE#         10
+  C:0018H         LINE#         11
+  C:001BH         LINE#         12
+  C:001EH         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         PROC          DISW_CONTROL_LED
+  C:0020H         LINE#         17
+  C:0020H         LINE#         18
+  C:0020H         LINE#         19
+  C:0023H         LINE#         20
+  -------         ENDPROC       DISW_CONTROL_LED
+  -------         PROC          LOGICSTATE_CONTROL_LED
+  -------         DO            
+  D:0007H         SYMBOL        temp
+  -------         ENDDO         
+  C:000FH         LINE#         22
+  C:000FH         LINE#         23
+  C:000FH         LINE#         24
+  C:0013H         LINE#         25
+  C:0017H         LINE#         26
+  -------         ENDPROC       LOGICSTATE_CONTROL_LED
+  -------         ENDMOD        MAIN
+
+Program Size: data=9.0 xdata=0 code=36
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

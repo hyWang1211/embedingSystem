@@ -1,0 +1,69 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              07/25/2023 17:01:17 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\main.lst) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "LCD1602.h"
+   2          #include <regx52.h>
+   3          unsigned int heart_time;                        /*heartbeat time */
+   4          unsigned int heart_time_record;
+   5          unsigned int record_time;
+   6          unsigned char heart_rate;
+   7          void main()
+   8          {
+   9   1              LCD_Init();
+  10   1              
+  11   1              LCD_ShowString(1, 1, "HR:");
+  12   1              LCD_ShowNum(1, 5, heart_rate, 3);
+  13   1              LCD_ShowString(1, 9, "BMP");
+  14   1              
+  15   1              LCD_ShowString(2, 1, "Up:");
+  16   1              LCD_ShowNum(2, 5, 126, 3);
+  17   1              
+  18   1              LCD_ShowString(2, 9, "Low:");
+  19   1              LCD_ShowNum(2, 14, 12, 2);
+  20   1              
+  21   1              while(1) {};
+  22   1      }
+  23          
+  24          void Int0_Routine() interrupt 0
+  25          {
+  26   1              heart_time_record = heart_time;
+  27   1              heart_time = 0;
+  28   1      }
+  29          
+  30          
+  31          void Timer0_Routine() interrupt 1
+  32          {
+  33   1              TL0 = 0x66;
+  34   1              TH0 = 0xFC;
+  35   1              
+  36   1              heart_time ++;
+  37   1              record_time ++;
+  38   1              
+  39   1              if (!record_time % 500) {
+  40   2                      record_time = 0;
+  41   2                      heart_rate = 6000 / heart_time_record;
+  42   2              }
+  43   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    213    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      7    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.60.7.0   MAIN                                                              07/25/2023 17:01:17 PAGE 2   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
