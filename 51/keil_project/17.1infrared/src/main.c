@@ -7,10 +7,10 @@
 unsigned char adr;
 unsigned char cmd;
 unsigned int time;
-// sbit p20 = P2^0;
+sbit p20 = P2^0;
 void main()
 {
-    // p20 = 0;
+    p20 = 0;
     LCD_Init();
     infrared_init();
     LCD_ShowString(1, 1, "Infradred Test");

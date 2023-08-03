@@ -1,0 +1,141 @@
+C51 COMPILER V9.60.7.0   INFRARED                                                          08/03/2023 13:59:13 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE INFRARED
+OBJECT MODULE PLACED IN .\Objects\infrared.obj
+COMPILER INVOKED BY: D:\development\Keil_v5\C51\BIN\C51.EXE infrared.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT
+                    -(.\Listings\infrared.lst) OBJECT(.\Objects\infrared.obj)
+
+line level    source
+
+   1          #include "infrared.h"
+   2          #include <REG52.H>
+   3          #include "int0.h"
+   4          #include "timer0.h"
+   5          
+   6          unsigned char IR_state;                 /*last IR_state*/
+   7          unsigned int IR_time;                   /*duration of negative edge*/
+   8          unsigned char IR_data[4];               /*store the final data*/
+   9          unsigned char IR_pdata;                 /*point to each bit of data, from 0 to 31*/
+  10          unsigned char IR_data_flag;             /*complete data or not*/
+  11          unsigned char IR_repeat_flag;           /*repeat state*/
+  12          unsigned char IR_addr, IR_command;      /*data format*/
+  13          
+  14          void infrared_init()
+  15          {
+  16   1          Int0_init();
+  17   1          Timer0_Init();
+  18   1      }
+  19          
+  20          unsigned char IR_get_data_flag()
+  21          {
+  22   1          unsigned char temp = IR_data_flag;
+  23   1          IR_data_flag = 0;
+  24   1          return temp;
+  25   1      }
+  26          
+  27          unsigned char IR_get_repeat_flag()
+  28          {
+  29   1          unsigned char temp = IR_repeat_flag;
+  30   1          IR_repeat_flag = 0;
+  31   1          return temp;
+  32   1      }
+  33          
+  34          unsigned char IR_get_data_addr()
+  35          {
+  36   1          return IR_addr;
+  37   1      }
+  38          
+  39          unsigned char IR_get_data_command()
+  40          {
+  41   1          return IR_command;
+  42   1      }
+  43          
+  44           
+  45          void int0_routine() interrupt 0
+  46          {
+  47   1          if (IR_state == 0) {
+  48   2              // P2 = 0;
+  49   2              Timer0_Init_set_counter(0);     /*clear time*/
+  50   2              Timer0_control(1);              /*start counting*/
+  51   2              IR_state = 1;                      /**over spare time*/
+  52   2          }else if (IR_state == 1) {
+  53   2              // P2 =0;
+  54   2              IR_time = Timer0_Init_get_counter();   /*The duration of IR_state 1*/
+C51 COMPILER V9.60.7.0   INFRARED                                                          08/03/2023 13:59:13 PAGE 2   
+
+  55   2              Timer0_Init_set_counter(0);
+  56   2      
+  57   2              if (IR_time > 12442 - 500 && IR_time < 12442 + 500) {         /*demonstrate last IR_state 1 is sta
+             -rt IR_state*/
+  58   3                  // P2 = 0;
+  59   3                  IR_state = 2;                  /*update next IR_state*/
+  60   3                  
+  61   3              }else if (IR_time > 10368 - 500 && IR_time < 10368 + 500) {   /*demonstrate last IR_state 1 is rep
+             -eat IR_state*/
+  62   3                  // P2 = 0;
+  63   3                  IR_repeat_flag = 1;
+  64   3                  IR_state = 0;                  /*enter spare time*/
+  65   3              }else {
+  66   3                  // P2 = 0;
+  67   3                  IR_state = 1;
+  68   3              }
+  69   2      
+  70   2          }else if (IR_state == 2) {             /*data transmission IR_state*/
+  71   2              // P2 = 0;
+  72   2              IR_time = Timer0_Init_get_counter();
+  73   2              Timer0_Init_set_counter(0);
+  74   2      
+  75   2              if (IR_time > 1032-500 && IR_time < 1032 + 500) {       /*data 0*/
+  76   3                  // P2 = 0;
+  77   3                  /*store data 0 to IR_data*/
+  78   3                  // IR_state = 2;
+  79   3      
+  80   3                  /**
+  81   3                   * IR_pdata / 8: Which byte is locked
+  82   3                   * IR_pdata % 8): Which bit is locked in above byte
+  83   3                   * X&= ~(0x01) means set the first bit of X to zero
+  84   3                  */
+  85   3                  IR_data[IR_pdata / 8] &= ~(0x01 << (IR_pdata % 8));
+  86   3                  IR_pdata ++;
+  87   3              }else if (IR_time > 2074 - 500 && IR_time < 2074 + 500) {   /*data 1*/
+  88   3                  // IR_state = 2;
+  89   3      
+  90   3                  IR_data[IR_pdata / 8] |= (0x01 << (IR_pdata % 8));
+  91   3                  IR_pdata++;
+  92   3              }else {
+  93   3                  IR_pdata = 0;
+  94   3                  IR_state = 1;
+  95   3              }
+  96   2      
+  97   2              if (IR_pdata >= 32) {
+  98   3                  // P2 = 0;  
+  99   3                  // IR_state = 0;
+ 100   3                  IR_pdata = 0;
+ 101   3                  if (IR_data[0] == ~IR_data[1] && IR_data[2] == ~IR_data[3]) {
+ 102   4                      IR_addr = IR_data[0];
+ 103   4                      IR_command = IR_data[2];
+ 104   4                      IR_data_flag = 1;
+ 105   4                  }
+ 106   3      
+ 107   3                  Timer0_control(0);
+ 108   3                  IR_state = 0;
+ 109   3              }
+ 110   2          }
+ 111   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.60.7.0   INFRARED                                                          08/03/2023 13:59:13 PAGE 3   
+
+   CODE SIZE        =    354    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     12    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

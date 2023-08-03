@@ -1,0 +1,973 @@
+Dependencies for Project 'Project', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\Start\core_cm3.h)(0x64C07BF8)()
+F (.\Start\startup_stm32f10x_md.s)(0x64C07BF8)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"STM32F10X_MD SETA 1"-o ./objects/startup_stm32f10x_md.o)
+F (.\Start\stm32f10x.h)(0x64C07BF8)()
+F (.\Start\system_stm32f10x.c)(0x64C07BF8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/system_stm32f10x.o -MD)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Start\system_stm32f10x.h)(0x64C07BF8)()
+F (.\Library\misc.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/misc.o -MD)
+I (Library\misc.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+F (.\Library\stm32f10x_adc.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_adc.o -MD)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_bkp.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_bkp.o -MD)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_can.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_can.o -MD)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_cec.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_cec.o -MD)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_crc.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_crc.o -MD)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_dac.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_dac.o -MD)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_dbgmcu.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_dbgmcu.o -MD)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_dma.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_dma.o -MD)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_exti.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_exti.o -MD)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_flash.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_flash.o -MD)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_fsmc.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_fsmc.o -MD)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_gpio.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_gpio.o -MD)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_i2c.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_i2c.o -MD)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_iwdg.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_iwdg.o -MD)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_pwr.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_pwr.o -MD)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_rcc.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_rcc.o -MD)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_rtc.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_rtc.o -MD)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_sdio.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_sdio.o -MD)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_spi.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_spi.o -MD)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_tim.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_tim.o -MD)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_usart.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_usart.o -MD)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\stm32f10x_wwdg.c)(0x64C07BF9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_wwdg.o -MD)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\Library\misc.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_adc.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_bkp.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_can.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_cec.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_crc.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_dac.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_dbgmcu.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_dma.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_exti.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_flash.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_fsmc.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_gpio.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_i2c.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_iwdg.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_pwr.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_rcc.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_rtc.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_sdio.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_spi.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_tim.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_usart.h)(0x64C07BF9)()
+F (.\Library\stm32f10x_wwdg.h)(0x64C07BF9)()
+F (.\HardWare\LED.c)(0x64C52642)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/led.o -MD)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\HardWare\LED.h)(0x64C51D52)()
+F (.\HardWare\Key.c)(0x64C5269E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/key.o -MD)
+I (HardWare\Key.h)(0x64C523B3)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+I (System\Delay.h)(0x64C4D9AE)
+F (.\HardWare\Key.h)(0x64C523B3)()
+F (.\HardWare\Buzzer.c)(0x64C52BD1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/buzzer.o -MD)
+I (HardWare\Buzzer.h)(0x64C52C18)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\HardWare\Buzzer.h)(0x64C52C18)()
+F (.\HardWare\LightSensor.c)(0x64C53AE9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/lightsensor.o -MD)
+I (HardWare\LightSensor.h)(0x64C52E87)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\HardWare\LightSensor.h)(0x64C52E87)()
+F (.\HardWare\OLED.c)(0x63087D18)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/oled.o -MD)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+I (HardWare\OLED_Font.h)(0x63087D24)
+F (.\HardWare\OLED.h)(0x63087D20)()
+F (.\HardWare\OLED_Font.h)(0x63087D24)()
+F (.\System\Delay.c)(0x61309210)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/delay.o -MD)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\System\Delay.h)(0x64C4D9AE)()
+F (.\User\main.c)(0x64C5CCB6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/main.o -MD)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+I (HardWare\OLED.h)(0x63087D20)
+F (.\User\stm32f10x_conf.h)(0x64C07C04)()
+F (.\User\stm32f10x_it.c)(0x64C07C04)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./User -I ./Start -I ./Library -I ./System -I ./HardWare-ID:/development/Keil_v5/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ./objects/stm32f10x_it.o -MD)
+I (User\stm32f10x_it.h)(0x64C07C04)
+I (Start\stm32f10x.h)(0x64C07BF8)
+I (Start\core_cm3.h)(0x64C07BF8)
+I (D:\development\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63884908)
+I (Start\system_stm32f10x.h)(0x64C07BF8)
+I (User\stm32f10x_conf.h)(0x64C07C04)
+I (Library\stm32f10x_adc.h)(0x64C07BF9)
+I (Library\stm32f10x_bkp.h)(0x64C07BF9)
+I (Library\stm32f10x_can.h)(0x64C07BF9)
+I (Library\stm32f10x_cec.h)(0x64C07BF9)
+I (Library\stm32f10x_crc.h)(0x64C07BF9)
+I (Library\stm32f10x_dac.h)(0x64C07BF9)
+I (Library\stm32f10x_dbgmcu.h)(0x64C07BF9)
+I (Library\stm32f10x_dma.h)(0x64C07BF9)
+I (Library\stm32f10x_exti.h)(0x64C07BF9)
+I (Library\stm32f10x_flash.h)(0x64C07BF9)
+I (Library\stm32f10x_fsmc.h)(0x64C07BF9)
+I (Library\stm32f10x_gpio.h)(0x64C07BF9)
+I (Library\stm32f10x_i2c.h)(0x64C07BF9)
+I (Library\stm32f10x_iwdg.h)(0x64C07BF9)
+I (Library\stm32f10x_pwr.h)(0x64C07BF9)
+I (Library\stm32f10x_rcc.h)(0x64C07BF9)
+I (Library\stm32f10x_rtc.h)(0x64C07BF9)
+I (Library\stm32f10x_sdio.h)(0x64C07BF9)
+I (Library\stm32f10x_spi.h)(0x64C07BF9)
+I (Library\stm32f10x_tim.h)(0x64C07BF9)
+I (Library\stm32f10x_usart.h)(0x64C07BF9)
+I (Library\stm32f10x_wwdg.h)(0x64C07BF9)
+I (Library\misc.h)(0x64C07BF9)
+F (.\User\stm32f10x_it.h)(0x64C07C04)()
