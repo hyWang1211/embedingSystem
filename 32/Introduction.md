@@ -453,7 +453,8 @@ C1和C2是滤波电容，R3和R4是限流电阻，R1和R2为上拉电阻
 
 #### 主模式触发DAC
 
-当计数值等于自动重装值时触发事件，此事件被映射到触发输出TRGO上，由TRGO连接DAC的触发转换引脚，这样不需要触发中断来触发DAC转换。减少了CPU在此上面的占用时间。
+当计数值等于自动重装值时触发事件，此事件被映射到触发输出TRGO上，由TRGO连接DAC的触发转换引脚，这样不需要触发中断来触发DAC转换。减少了CPU在此上面的占用时间。也称为主模式
+当定时器的工作受到外来触发信号的影响或控制时，它就是工作在从模式，其中从模式可以有多种；如果某定时器能产生触发输出并作为其它定时器的触发输入信号时，此时该定时器就是工作在主模式。
 
 ### 通用定时器
 
@@ -467,7 +468,7 @@ C1和C2是滤波电容，R3和R4是限流电阻，R1和R2为上拉电阻
 
 #### 内外时钟源选择支持(图片中上部分)
 
-- 内部时钟源(72MHz)。见最上面那根线。(主模式，也是最常用的)
+- 内部时钟源(72MHz)。见最上面那根线。(也是最常用的)
 - 外部时钟源
   - ETRF。它是ETR经过滤波后的信号，即上面一路ETRF进入触发控制器，接着就可以选择作为时基单元的时钟了。(这一路也叫做外部时钟模式2)。
   - TRGI。通常来说主要用于触发输入(触发定时器的从模式)。在这里我们将其作为外部时钟源考虑(外部时钟模式1)。通过这一路的外部时钟有：
@@ -482,6 +483,7 @@ C1和C2是滤波电容，R3和R4是限流电阻，R1和R2为上拉电阻
 
 ### 高级定时器
 
+![](images/2023-08-04-09-59-12.png)
 大部分没有改变。
 在申请中断的地方增加了一个重复次数计数器。作用，可以每个几个计数周期从才发生一次中断。
 
@@ -541,3 +543,65 @@ C1和C2是滤波电容，R3和R4是限流电阻，R1和R2为上拉电阻
 
 ![a](images/2023-08-03-22-38-49.png)
 与上面相反，没有立刻改变这个值，而是带有缓冲(也叫做影子寄存器)，类似与预分频的时序。
+
+### 定时器开启步骤
+
+#### 开启步骤
+
+- RCC开启时钟。
+- 选择时基单元的时钟源
+- 配置时基单元
+- 配置输出中断控制
+- 配置NVIC
+- 配置运行控制
+- 编写定时器中断函数
+
+#### 常用函数
+
+```cpp
+void TIM_DeInit(TIM_TypeDef* TIMx)                                              //恢复定时器的默认配置。
+void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct)//时基单元初始化
+void TIM_TimeBaseStructInit(TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct)//给结构体赋默认值
+void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState)//运行控制使能，只有开启后，定时器才能计时
+void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState)//中断输出控制使能，只有开启后中断才能被接收处理
+
+//时钟源选择，重要
+void TIM_InternalClockConfig(TIM_TypeDef* TIMx)//选择内部时钟源
+void TIM_ITRxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource)//选择外部ITRx作为时钟源
+void TIM_TIxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_TIxExternalCLKSource,uint16_t TIM_ICPolarity, uint16_t ICFilter)//选择外部TIx捕获通道的时钟
+void TIM_ETRClockMode1Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,uint16_t ExtTRGFilter)//选择ETR通过外部时钟模式1作为输入时钟
+void TIM_ETRClockMode2Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity, uint16_t ExtTRGFilter)//香烟则ETR通过外部时钟模式2作为输入时钟
+
+//定时器中相关参数配置函数，及工具函数
+void TIM_ETRConfig(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
+uint16_t ExtTRGFilter)//配置ETR引脚的预分频器、极性、滤波器等参数
+void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode)//写入预分频值
+void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode)//改变计数模式(上、下、上下)
+void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState)//计数器是否有预装(带不带缓冲)
+void TIM_SetCounter(TIM_TypeDef* TIMx, uint16_t Counter)//给定时器写入一个计数值(初始值？)
+void TIM_SetAutoreload(TIM_TypeDef* TIMx, uint16_t Autoreload)//给定时器写入一个自动重装值
+uint16_t TIM_GetCounter(TIM_TypeDef* TIMx)//获取当前计数器的值
+uint16_t TIM_GetPrescaler(TIM_TypeDef* TIMx)//获取当前的预分频值
+//获取标志位，清除标志位
+FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+void TIM_ClearFlag(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+
+//注意
+//1.在TIM_TimeBaseStructInit中，其参数TIM_TimeBaseInitTypeDef结构体内部有一个参数TIM_ClockDivision。
+//我们知道当选择外部时钟作为输入时，会有一个滤波器可以滤掉信号的抖动干扰。其工作原理与此参数有关。具体来说，滤波器在一
+//个固定的时钟频率f下进行采样，如果连续N个采样点均为相同的电平，则表示输入信号稳定了，就输出此采样值，如果不完全相同则
+//保持上一次的输出或输出低电平，这里的f和N都是其滤波参数，f越低，N越多则滤波效果越好。关键的这个采用频率f可以来自内部
+//时钟，也可以来自一个内部时钟加上一个时钟分频，这个时钟分频就是我们的参数TIM_ClockDivision
+
+
+//2.TIM_RepetitionCounter同样也是其内部参数，但是这个只对高级定时器生效。
+
+
+//3.在我们每次复位之后，定时器的值不再是从0开始计时而是从1开始，这是为什么？注意到在TimeBaseInit函数中，在最后可以看到生成一个更新事件来重新装载预分频器和重复计数器的值，这样做的目的是使预分频器的值有效能够进行分频。但是也会产生一个副作用：更新事件和更新中断时同时发生的，这样就会导致计数时从1开始，解决方案如下：在TimeBaseInit后，开启中断之前手动调用一次TIM_ClearFlag(TIM2, TIM_FLAG_Update)
+```
+
+## TIM 输出比较
+
+OC(Output Compare)输出比较，可以比较CNT与CCR寄存器值的关系，来对输出电平进行置1，0或翻转操作，用于输出一定频率和占空比的PWM波形
